@@ -1,0 +1,47 @@
+<!-- Separar commits que modifiquen javascript dels que modifiquen HTML -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoteKeeper</title>
+    <link rel="stylesheet" href="sanitize.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1 class="mainTitle">NoteKeeper</h1>
+    </header>
+    <main>
+        <section aria-labelledby="newNoteFormHeading">
+            <h2 class="newNoteFormHeading">New Note Form</h2>
+            <form class="newNoteForm" aria-describedby="newNoteInstructions">
+                
+                <label for="noteTitle">Title</label>
+                <input type="text" class="noteTitle" name="noteTitle" required aria-required="true">
+                
+                <label for="noteContent">Content</label>
+                <textarea class="noteContent" name="noteContent" required aria-required="true"></textarea>
+                
+                <label for="notePriority">Priority</label>
+                <select class="notePriority" name="notePriority">
+                    <option value="" disabled selected>Select priority</option>
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+                
+                <button type="submit">Add Note</button>
+            </form>
+        </section>
+        
+        <section aria-labelledby="notesListHeading">
+            <h2 class="notesListHeading">Notes List</h2>
+            <div class="notesList" role="list">
+                
+            </div>
+        </section>
+    </main>
+</body>
+</html>
