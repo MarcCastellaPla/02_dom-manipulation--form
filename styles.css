@@ -4,3 +4,6 @@
     font-size: 35px;
     color: var(--color-text-light);
 }
+body {
+    background-color: black;
+}
