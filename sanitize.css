@@ -61,6 +61,7 @@ img {
 input, button {
     font-family: inherit;
     font-size: inherit;
+    border: 0;
 }
 
 *, *:before, *:after {
