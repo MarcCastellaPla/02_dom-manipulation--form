@@ -67,8 +67,12 @@ input, button {
 *, *:before, *:after {
     box-sizing: border-box;
 }
-input:focus {
-    border: none ;
-    box-shadow: none ;
-    outline: none ;
-  }
+button:focus {
+    outline: none;
+}
+button, input[type="button"], input[type="submit"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: inherit; 
+}
