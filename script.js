@@ -9,16 +9,24 @@ newNoteForm.addEventListener("submit", (event) => {
     const noteContent = formData.get("noteContent");
     const notePriority = formData.get("notePriority") || "No priority";
 
-    const noteItem = document.createElement("div");
+    const noteItem = document.createElement("li");
     noteItem.classList.add("noteBase");
-    noteItem.setAttribute("role", "listitem");
 
-    noteItem.innerHTML = `
-        <h3 class="newNoteTitle">${noteTitle}</h3>
-        <p class="newNoteContent">${noteContent}</p>
-        <p class="newNotePriority">${notePriority}</p>
-    `;
+    const noteTitleElement = createElement("h3", "newNoteTitle", noteTitle);
+    const noteContentElement = createElement("p", "newNoteContent", noteContent);
+    const notePriorityElement = createElement("p", "newNotePriority", notePriority);
+
+    noteItem.appendChild(noteTitleElement);
+    noteItem.appendChild(noteContentElement);
+    noteItem.appendChild(notePriorityElement);
 
     notesListContainer.appendChild(noteItem);
     newNoteForm.reset();
 });
+
+function createElement(tag, className, textContent) {
+    const element = document.createElement(tag);
+    element.classList.add(className);
+    element.textContent = textContent;
+    return element;
+}
