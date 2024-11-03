@@ -1,4 +1,3 @@
-<!-- Separar commits que modifiquen javascript dels que modifiquen HTML -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,41 +6,43 @@
     <title>NoteKeeper</title>
     <link rel="icon" href="data:," />
     <link rel="stylesheet" href="sanitize.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
 <body>
     <header>
         <h1 class="mainTitle">NoteKeeper</h1>
     </header>
-    <main>
+    <main class="mainContent">
         <section aria-labelledby="newNoteFormHeading">
-            <h2 class="newNoteFormHeading">New Note Form</h2>
-            <form class="newNoteForm" aria-describedby="newNoteInstructions">
+            <h2 class="formAndListTitle">New Note Form</h2>
+            <form class="noteBase newNoteForm" aria-describedby="newNoteInstructions">
                 
                 <label for="noteTitle">Title</label>
                 <input type="text" class="noteTitle" name="noteTitle" required aria-required="true">
                 
                 <label for="noteContent">Content</label>
-                <textarea class="noteContent" name="noteContent" required aria-required="true"></textarea>
+                <input class="noteContent" name="noteContent" required aria-required="true"></input>
                 
                 <label for="notePriority">Priority</label>
                 <select class="notePriority" name="notePriority">
                     <option value="" disabled selected>Select priority</option>
-                    <option value="low">Low</option>
-                    <option value="medium">Medium</option>
-                    <option value="high">High</option>
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
                 </select>
                 
-                <button type="submit">Add Note</button>
+                <button type="submit" class="addNoteButton">Add Note</button>
             </form>
         </section>
         
         <section aria-labelledby="notesListHeading">
-            <h2 class="notesListHeading">Notes List</h2>
-            <div class="notesList" role="list">
+            <h2 class="formAndListTitle notesListHeading">Notes List</h2>
+            <ul id="notesList">
+
+            </ul>
                 
-            </div>
         </section>
     </main>
 </body>

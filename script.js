@@ -1,5 +1,5 @@
 const newNoteForm = document.querySelector(".newNoteForm");
-const notesListContainer = document.querySelector(".notesList");
+const notesListContainer = document.querySelector("#notesList");
 
 newNoteForm.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -9,16 +9,24 @@ newNoteForm.addEventListener("submit", (event) => {
     const noteContent = formData.get("noteContent");
     const notePriority = formData.get("notePriority") || "No priority";
 
-    const noteItem = document.createElement("div");
-    noteItem.classList.add("note");
-    noteItem.setAttribute("role", "listitem");
+    const noteItem = document.createElement("li");
+    noteItem.classList.add("noteBase");
 
-    noteItem.innerHTML = `
-        <h3 class="noteTitle">${noteTitle}</h3>
-        <p class="noteContent">${noteContent}</p>
-        <p class="notePriority">${notePriority}</p>
-    `;
+    const noteTitleElement = createElement("h3", "newNoteTitle", noteTitle);
+    const noteContentElement = createElement("p", "newNoteContent", noteContent);
+    const notePriorityElement = createElement("p", "newNotePriority", notePriority);
+
+    noteItem.appendChild(noteTitleElement);
+    noteItem.appendChild(noteContentElement);
+    noteItem.appendChild(notePriorityElement);
 
     notesListContainer.appendChild(noteItem);
     newNoteForm.reset();
 });
+
+function createElement(tag, className, textContent) {
+    const element = document.createElement(tag);
+    element.classList.add(className);
+    element.textContent = textContent;
+    return element;
+}
