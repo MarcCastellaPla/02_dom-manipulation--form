@@ -12,7 +12,7 @@ body {
     font-weight: 700;
     margin: var(--spacing-l);
     padding-bottom: var(--spacing-md);
-    padding-left: var(--spacing-md);;
+    padding-left: var(--spacing-md);
 
 }
 .noteBase {
@@ -66,7 +66,6 @@ body {
     border-left: 4px solid #007bff; 
     padding-left: var(--spacing-sm); 
     margin-bottom: var(--spacing-sm);
-    margin: var(--spacing-xs) 0;
     font-size: 1.25rem;
     color: black;
 
@@ -85,6 +84,9 @@ body {
   }
 .newNoteContent, .newNotePriority {
     margin-left: 20px;
+}
+.notePriority {
+    background-color: white;
 }
 @media (prefers-color-scheme: dark) {
 
@@ -106,9 +108,6 @@ body {
         border: 1px solid var(--color-input-border-dark); /* TAMBE ESPERAR RESPOSTA */
         /* background-color: var(--color-input-bg-dark); esperar resposta del Jaume */
         /* color: var(--color-input-text-dark); Mes del mateix */
-    }
-    .notePriority {
-        background-color: white;
     }
     .addNoteButton {
         background-color: var(--color-button-bg-dark);
@@ -133,9 +132,6 @@ body {
     
     .noteTitle, .noteContent, .notePriority {
         border: 1px solid var(--color-input-border-light);
-    }
-    .notePriority {
-        background-color: white;
     }
     .addNoteButton {
         background-color: var(--color-button-bg-light);
