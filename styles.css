@@ -126,7 +126,7 @@ body {
     }
     .noteTitle:focus, .noteContent:focus, .notePriority:focus {
         border: 2px solid blue;
-        outline: none; /* Optionally, remove the default outline */
+        outline: none;
     }
     
     .addNoteButton {
