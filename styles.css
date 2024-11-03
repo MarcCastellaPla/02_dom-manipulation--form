@@ -13,12 +13,10 @@ body {
     margin: var(--spacing-l);
     padding-bottom: 0.75rem;
     padding-left: var(--spacing-md);
-
 }
 .noteBase {
     display: grid;
     row-gap: var(--spacing-md);
-    background-color: white;
     margin: var(--spacing-md);
     padding: var(--spacing-md);
     border-radius: var(--radius-sm);
@@ -31,8 +29,6 @@ body {
     width: 100%;
     padding-right: var(--spacing-md);
     height: 2rem;
-    background-color: var(--color-gray-light);
-    border: 1px solid gray;
     font-size: 14px;
     font-weight: 300;
     padding-left: var(--spacing-xs);
@@ -46,11 +42,6 @@ body {
     display: flex;
     font-weight: 600;
     justify-content: flex-end;
-    color: var(--color-text-black);
-}
-
-.noteTitle:focus, .noteContent:focus, .notePriority:focus {
-    background-color: #f0f4ff 
 }
 .addNoteButton {
     padding: var(--spacing-sm) var(--spacing-md);
@@ -58,7 +49,10 @@ body {
     border-radius: var(--radius-sm);
     height: 2.5rem;
     grid-column: 1 / -1; 
-    width: 100%; 
+    width: 100%;
+}
+.addNoteButton:hover {
+    background-color: var(--color-button-hover);
 }
 .newNoteTitle {
     display: block;
@@ -67,51 +61,48 @@ body {
     padding-left: var(--spacing-sm); 
     margin-bottom: var(--spacing-sm);
     font-size: 1.25rem;
-    color: var(--color-text-black);;
-
 }
 .newNotePriority {
     font-size: 14px;
     font-weight: bold;
-    color: var(--color-text-black);;
     margin-top: 5px;
 }    
 .newNoteContent {
     font-size: 16px;
-    font-weight: normal;    
-    color: var(--color-text-light);    
+    font-weight: normal;     
     font-style: italic;   
-  }
+}
 .newNoteContent, .newNotePriority {
-    margin-left: var(--spacing-sm);
+    margin-left: var(--spacing-l);
 }
-.notePriority {
-    background-color: white;
-}
+
 @media (prefers-color-scheme: dark) {
 
     body {
         background-color: var(--color-bg-dark);
         color: var(--color-text-dark);
     }
-    input {
-        outline: none;
-        box-shadow: none;
-      }
     .formAndListTitle {
-        border-bottom: 1px solid var(--color-input-border-dark);
-    
+        border-bottom: 2px solid var(--color-input-border-dark);
     }
-    
-    
+    .noteBase {
+        background-color: var(--color-card-bg-dark);
+        border: 1px solid var(--color-card-border-dark);
+        color: var(--color-card-text-dark);
+        box-shadow: 0 4px 8px var(--color-card-shadow-dark);
+    }
     .noteTitle, .noteContent, .notePriority {
-        border: 2px solid var(--color-gray-border);
+        background-color: var(--color-input-bg-dark);
+        border: 1px solid var(--color-input-border-dark);
+        color: var(--color-input-text-dark);
     }
     .addNoteButton {
         background-color: var(--color-button-bg-dark);
         color: var(--color-button-text-dark);
     }
-    
+    .notesListHeading {
+        border-bottom: 1px solid #fff;
+    }
 }
 @media (prefers-color-scheme: light) {
 
@@ -123,13 +114,18 @@ body {
         color: var(--color-text-light);
     }
     .formAndListTitle {
-        border-bottom: 1px solid gainsboro;
-    
+        border-bottom: 1px solid var(--color-input-border-light);
     }
-    
-    
+    .noteBase {
+        background-color: var(--color-card-bg-light);
+        border: 1px solid var(--color-card-border-light);
+        color: var(--color-card-text-light);
+        box-shadow: 0 4px 8px var(--color-card-shadow-light);
+    }
     .noteTitle, .noteContent, .notePriority {
+        background-color: var(--color-input-bg-light);
         border: 1px solid var(--color-input-border-light);
+        color: var(--color-input-text-light);
     }
     .addNoteButton {
         background-color: var(--color-button-bg-light);
@@ -138,5 +134,4 @@ body {
     .addNoteButton:hover {
         background-color: var(--color-button-hover-light);
     }
-    
 }
