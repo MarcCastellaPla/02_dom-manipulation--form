@@ -124,6 +124,11 @@ body {
         border: 1px solid var(--color-input-border-light);
         color: var(--color-input-text-light);
     }
+    .noteTitle:focus, .noteContent:focus, .notePriority:focus {
+        border: 2px solid blue;
+        outline: none; /* Optionally, remove the default outline */
+    }
+    
     .addNoteButton {
         background-color: var(--color-button-bg-light);
         color: var(--color-button-text-light);
