@@ -11,7 +11,7 @@ body {
     font-size: 22px;
     font-weight: 700;
     margin: var(--spacing-l);
-    padding-bottom: var(--spacing-md);
+    padding-bottom: 0.75rem;
     padding-left: var(--spacing-md);
 
 }
@@ -27,15 +27,15 @@ body {
     align-items: center;
 }
 .noteTitle, .noteContent, .notePriority {
-    border-radius: 5px;
+    border-radius: var(--radius-xs);
     width: 100%;
     padding-right: var(--spacing-md);
     height: 2rem;
-    background-color: #F0F0F0;
+    background-color: var(--color-gray-light);
     border: 1px solid gray;
     font-size: 14px;
     font-weight: 300;
-    padding-left: 5px;
+    padding-left: var(--spacing-xs);
 }
 .newNoteForm {
     display: grid;
@@ -46,7 +46,7 @@ body {
     display: flex;
     font-weight: 600;
     justify-content: flex-end;
-    color: black;
+    color: var(--color-text-black);
 }
 
 .noteTitle:focus, .noteContent:focus, .notePriority:focus {
@@ -63,27 +63,27 @@ body {
 .newNoteTitle {
     display: block;
     font-weight: bold;
-    border-left: 4px solid #007bff; 
+    border-left: 4px solid var(--color-accent);
     padding-left: var(--spacing-sm); 
     margin-bottom: var(--spacing-sm);
     font-size: 1.25rem;
-    color: black;
+    color: var(--color-text-black);;
 
 }
 .newNotePriority {
     font-size: 14px;
     font-weight: bold;
-    color: #000;
+    color: var(--color-text-black);;
     margin-top: 5px;
 }    
 .newNoteContent {
     font-size: 16px;
     font-weight: normal;    
-    color: #333;        
+    color: var(--color-text-light);    
     font-style: italic;   
   }
 .newNoteContent, .newNotePriority {
-    margin-left: 20px;
+    margin-left: var(--spacing-sm);
 }
 .notePriority {
     background-color: white;
@@ -99,15 +99,13 @@ body {
         box-shadow: none;
       }
     .formAndListTitle {
-        border-bottom: 1px solid white;
+        border-bottom: 1px solid var(--color-input-border-dark);
     
     }
     
     
     .noteTitle, .noteContent, .notePriority {
-        border: 1px solid var(--color-input-border-dark); /* TAMBE ESPERAR RESPOSTA */
-        /* background-color: var(--color-input-bg-dark); esperar resposta del Jaume */
-        /* color: var(--color-input-text-dark); Mes del mateix */
+        border: 2px solid var(--color-gray-border);
     }
     .addNoteButton {
         background-color: var(--color-button-bg-dark);
